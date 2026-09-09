@@ -4,6 +4,36 @@ MediGo is a Flutter app for a bus-mounted medicine dispenser. A patient signs in
 
 > **Prototype Warning:** This is a prototype. Do not use it to make medical decisions or dispense medicine without appropriate clinical, hardware, and safety review.
 
+## App Gallery & Screenshots
+
+<p align="center">
+  <img src="Images/1.jpeg" width="300" alt="App Screen 1">
+  <img src="Images/2.jpeg" width="300" alt="App Screen 2">
+  <img src="Images/3.jpeg" width="300" alt="App Screen 3">
+  <img src="Images/4.jpeg" width="300" alt="App Screen 4">
+  <img src="Images/5.jpeg" width="300" alt="App Screen 5">
+  <img src="Images/6.jpeg" width="300" alt="App Screen 6">
+  <img src="Images/7.jpeg" width="300" alt="App Screen 7">
+  <img src="Images/8.jpeg" width="300" alt="App Screen 8">
+  <img src="Images/9.jpeg" width="300" alt="App Screen 9">
+  <img src="Images/10.jpeg" width="300" alt="App Screen 10">
+  <img src="Images/11.jpeg" width="300" alt="App Screen 11">
+  <img src="Images/12.jpeg" width="300" alt="App Screen 12">
+  <img src="Images/13.jpeg" width="300" alt="App Screen 13">
+  <img src="Images/14.jpeg" width="300" alt="App Screen 14">
+  <img src="Images/15.jpeg" width="300" alt="App Screen 15">
+  <img src="Images/16.jpeg" width="300" alt="App Screen 16">
+  <img src="Images/17.jpeg" width="300" alt="App Screen 17">
+  <img src="Images/18.jpeg" width="300" alt="App Screen 18">
+  <img src="Images/19.jpeg" width="300" alt="App Screen 19">
+  <img src="Images/20.jpeg" width="300" alt="App Screen 20">
+  <img src="Images/21.jpeg" width="300" alt="App Screen 21">
+  <img src="Images/22.jpeg" width="300" alt="App Screen 22">
+  <img src="Images/23.jpeg" width="300" alt="App Screen 23">
+  <img src="Images/24.jpeg" width="300" alt="App Screen 24">
+  <img src="Images/25.jpeg" width="300" alt="App Screen 25">
+</p>
+
 ## What You Need
 
 * Windows 10/11, macOS, or Linux
@@ -291,4 +321,4 @@ Keystores or service-account JSON files
 
 Firebase Admin credentials
 
-The repository ignores Flutter build output and local Android configuration. Each teammate must run the Firebase setup steps locally after cloning. steps locally after cloning.
+The repository ignores Flutter build output and local Android configuration. Each teammate must run the Firebase setup steps locally after cloning.
