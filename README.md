@@ -17,7 +17,7 @@ The project uses Firebase Authentication, Realtime Database, Firebase Storage, Q
 
 ## Clone The Project
 
-```powershell
+powershell
 git clone <repository-url>
 cd MediGo
 flutter doctor
@@ -40,7 +40,7 @@ flutter doctor --android-licenses
 flutter doctor
 Accept the Android licenses. For a physical phone, enable Developer Options and USB debugging, connect it by USB, and accept the authorization dialog on the phone.
 
-Configure Firebase
+## Configure Firebase
 Create or use a Firebase project
 Open console.firebase.google.com.
 
@@ -69,7 +69,8 @@ The Firebase project used by google-services.json matches the values in lib/fire
 
 Do not edit android/local.properties by hand unless Flutter created it. It contains the local Android SDK path and is different on every computer.
 
-Enable Authentication
+## Enable Authentication
+
 Open Build > Authentication in Firebase Console.
 
 Select Get started.
@@ -119,7 +120,8 @@ After confirming access, change the temporary password through the Firebase Auth
 
 If the operator sees the patient screens, check that the UID in users/ is exactly the UID shown in Firebase Authentication and that role is exactly lowercase operator.
 
-Enable Realtime Database
+## Enable Realtime Database
+
 Open Build > Realtime Database.
 
 Select Create Database and choose the required region.
@@ -130,7 +132,7 @@ Before production, replace test rules with authenticated rules reviewed by your 
 
 For a quick prototype test, the database may use Firebase test mode. Test mode allows unauthenticated access and must not be used for a public deployment. A production rules design should at minimum restrict patient data to signed-in users, restrict operator inventory changes to users whose role is operator, and allow the ESP32 only the device paths it needs. Have the Firebase owner review and publish the final rules in Realtime Database > Rules.
 
-The app uses these paths:
+## The app uses these paths:
 
 Plaintext
 users/
@@ -144,7 +146,8 @@ Enable Firebase Storage if prescription images must be uploaded. Configure Stora
 
 For team testing, open Storage > Get started, choose the same Firebase region policy as the project, and use test mode only temporarily.
 
-Firebase manual setup summary
+## Firebase manual setup summary
+
 The Firebase Console setup order is:
 
 Create/select the Firebase project.
@@ -167,7 +170,8 @@ Run flutter pub get, flutter analyze, and flutter run.
 
 lib/firebase_options.dart contains the project settings used by Flutter. For a different Firebase project, regenerate or replace it with the FlutterFire configuration for that project. Never commit Firebase service-account keys, Admin SDK keys, or private API credentials.
 
-Install Dependencies And Run
+## Install Dependencies And Run
+
 PowerShell
 flutter pub get
 flutter analyze
@@ -200,7 +204,8 @@ Confirm the result page shows every medicine, the command, and ESP delivery stat
 
 Check patient History and operator Requests.
 
-Inventory Setup
+## Inventory Setup
+
 The operator maps each medicine to a physical ESP32 compartment:
 
 Plaintext
@@ -210,7 +215,8 @@ Position 2 -> ESP32 position 2
 Position 7 -> ESP32 position 7
 When medicine is physically loaded, open Inventory, select the compartment, and enter the medicine name, strength, stock count, and prescription requirement. Patient selection only shows medicines with stock greater than zero. A successful request atomically subtracts the requested quantity from Firebase inventory.
 
-ESP32 Command Format
+## ESP32 Command Format
+
 The current app command is a 14-character ASCII string, not raw binary bytes. It contains seven two-digit decimal quantities:
 
 Plaintext
@@ -239,7 +245,8 @@ Plaintext
 GET http://<esp32-ip>/status
 The IoT team must implement these endpoints, or update lib/services/esp_connection_service.dart to match their final protocol. The original ESP32 sketch only reads DIP switches; it must be extended with WiFi and an HTTP server before real delivery can work.
 
-Generate A Test QR Code
+## Generate A Test QR Code
+
 Until the bus has a real ESP32, use a QR generator such as qrcode-monkey.com:
 
 Choose a plain text QR code.
@@ -252,7 +259,8 @@ Open the app QR icon and scan it.
 
 A fake IP should produce a connection failure to test QR reading and failure handling. A MAC address such as AA:BB:CC:DD:EE:FF identifies hardware but cannot be used directly for an HTTP request; the QR should contain the ESP32's reachable IP or hostname.
 
-Simulate An ESP32 On Your Laptop
+## Simulate An ESP32 On Your Laptop
+
 The phone and laptop must use the same WiFi network. Find the laptop address in PowerShell:
 
 PowerShell
@@ -268,7 +276,8 @@ The simulator listens on port 8080, so create a QR containing your laptop addres
 
 If Windows Firewall asks, allow Python through private networks. Keep the simulator window open while testing. Stop it with Ctrl+C.
 
-GitHub Checklist
+## GitHub Checklist
+
 Before pushing:
 
 PowerShell
